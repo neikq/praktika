@@ -1,0 +1,177 @@
+Вот пример HTML-страницы с вашим текстом, оформленной в виде документа спецификации требований к программному обеспечению (SRS):
+
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Спецификация требований к ПО (SRS) для системы «Библиотека v1.0»</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h3 {
+            margin-top: 20px;
+            color: #34495e;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #ecf0f1;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .section {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .list-title {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Спецификация требований к программному обеспечению (SRS) для системы «Библиотека v1.0»</h1>
+
+<div class="section">
+    <h2>1. Введение</h2>
+    <p><strong>Цель документа:</strong> описать требования к автоматизированной системе управления библиотекой «Книжный мир».</p>
+    <p><strong>Назначение системы:</strong> автоматизация процессов учёта книжного фонда и обслуживания читателей.</p>
+</div>
+
+<div class="section">
+    <h2>2. Стейкхолдеры и их интересы</h2>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Стейкхолдер</th>
+                    <th>Роль</th>
+                    <th>Интересы</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Директор</td>
+                    <td>Заказчик</td>
+                    <td>Снижение ошибок в отчётности, контроль движения книг, быстрая подготовка отчётов</td>
+                </tr>
+                <tr>
+                    <td>Библиотекарь</td>
+                    <td>Пользователь</td>
+                    <td>Быстрый поиск книг, удобная выдача/приём книг, автоматическое напоминание о просрочках</td>
+                </tr>
+                <tr>
+                    <td>Читатель</td>
+                    <td>Пользователь</td>
+                    <td>Онлайн-проверка наличия книг, продление книг онлайн, просмотр истории заказов</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <h2>3. Бизнес-требования</h2>
+    <ul>
+        <li><strong>BR1:</strong> Снижение времени обслуживания читателя на 50% за 3 месяца</li>
+        <li><strong>BR2:</strong> Исключение ошибок в отчётности по движению книг</li>
+        <li><strong>BR3:</strong> Сокращение времени поиска книги до 1 минуты</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>4. Функциональные требования</h2>
+    <h3>4.1. Управление каталогом</h3>
+    <ul>
+        <li><strong>FR1:</strong> Ведение каталога книг с полями: автор, название, ISBN, жанр, год издания, количество экземпляров</li>
+        <li><strong>FR2:</strong> Поиск книг по автору, названию, жанру</li>
+        <li><strong>FR3:</strong> Добавление/редактирование/удаление записей о книгах</li>
+    </ul>
+    <h3>4.2. Работа с читателями</h3>
+    <ul>
+        <li><strong>FR4:</strong> Регистрация читателей с сохранением персональных данных</li>
+        <li><strong>FR5:</strong> Оформление выдачи/возврата книг</li>
+        <li><strong>FR6:</strong> Отслеживание просроченных книг</li>
+        <li><strong>FR7:</strong> Формирование отчётов по движению книг</li>
+    </ul>
+    <h3>4.3. Пользовательский интерфейс</h3>
+    <ul>
+        <li><strong>FR8:</strong> Веб-интерфейс для читателей с функциями поиска и продления книг</li>
+        <li><strong>FR9:</strong> Личный кабинет читателя</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>5. Нефункциональные требования</h2>
+    <h3>5.1. Производительность</h3>
+    <ul>
+        <li><strong>NFR1:</strong> Время поиска книги — не более 3 секунд</li>
+        <li><strong>NFR2:</strong> Время отклика системы — не более 5 секунд при 5 пользователях</li>
+    </ul>
+    <h3>5.2. Безопасность</h3>
+    <ul>
+        <li><strong>NFR3:</strong> Разграничение прав доступа для пользователей</li>
+        <li><strong>NFR4:</strong> Шифрование паролей</li>
+        <li><strong>NFR5:</strong> Резервное копирование данных</li>
+    </ul>
+    <h3>5.3. Удобство использования</h3>
+    <ul>
+        <li><strong>NFR6:</strong> Интуитивно понятный интерфейс</li>
+        <li><strong>NFR7:</strong> Обучение библиотекаря — не более 2 часов</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>6. Методы верификации</h2>
+    <ul>
+        <li>Тестирование функциональности</li>
+        <li>Нагрузочное тестирование</li>
+        <li>Проверка безопасности</li>
+        <li>Оценка удобства использования</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>7. Ограничения</h2>
+    <ul>
+        <li>Работа с существующей базой данных</li>
+        <li>Поддержка русского языка</li>
+        <li>Интеграция с существующей инфраструктурой библиотеки</li>
+    </ul>
+</div>
+
+</body>
+</html>
