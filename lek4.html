@@ -4,47 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Структура операционных систем</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f0f4f8;
-            line-height: 1.6;
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        ul {
-            margin-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .section {
-            background-color: #ffffff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        .subsection {
-            margin-top: 15px;
-        }
-        .list-title {
-            font-weight: bold;
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <div class="cont">
+        <div>
+    <p><h1><button><a href="index.html">лекция 1</a></button></h1></p>
+    <p><h1><button><a href="lek2.html">лекция 2</a></button></h1></p>
+    <p><h1><button><a href="lek3.html">лекция 3</a></button></h1></p>
+    <p><h1><button><a href="lek4.html">лекция 4</a></button></h1></p>
+    <p><h1><button><a href="lek5.html">лекция 5</a></button></h1></p>
+    <p><h1><button><a href="lek6.html">лекция 6</a></button></h1></p>
+    <p><h1><button><a href="lek7.html">лекция 7</a></button></h1></p>
+    <p><h1><button><a href="lek10.html">лекция 10</a></button></h1></p>
+    <p><h1><button><a href="answerr.html">ответы</a></button></h1></p>
+    <p><h1><button><a href="otveti.html">ответы</a></button></h1></p>
+    <p><h1><button><a href="УП05 1 Сбор исходных данных для ис">зад1</a></button></h1></p>
+    </div>
+    <div>
 <h1>Структура операционных систем</h1>
 
-<div class="section">
+
     <h2>Основные компоненты ОС</h2>
     <ul>
         <li><strong>Ядро</strong> — управление процессами, памятью, устройствами</li>
@@ -55,9 +35,9 @@
         <li><strong>Системные библиотеки</strong> — функции для приложений</li>
         <li><strong>Пользовательский интерфейс</strong> — взаимодействие с пользователем</li>
     </ul>
-</div>
 
-<div class="section">
+
+
     <h2>Виды архитектур ОС</h2>
     <ul>
         <li><strong>Монолитная</strong> — все компоненты в едином ядре</li>
@@ -65,72 +45,70 @@
         <li><strong>Слоистая</strong> — уровни с предоставлением услуг</li>
         <li><strong>Клиент-серверная</strong> — микроядро + сервисы</li>
     </ul>
-</div>
 
-<div class="section">
+
     <h2>Типы ядер ОС</h2>
-    <div class="subsection">
+
         <h3>Монолитное ядро</h3>
         <ul>
             <li>Единый исполняемый файл</li>
             <li>Высокая производительность</li>
             <li>Примеры: Linux, UNIX</li>
         </ul>
-    </div>
-    <div class="subsection">
+
+
         <h3>Микроядро</h3>
         <ul>
             <li>Минимальная функциональность</li>
             <li>Высокая надёжность</li>
             <li>Примеры: Minix, QNX</li>
         </ul>
-    </div>
-    <div class="subsection">
+
+
         <h3>Гибридное ядро</h3>
         <ul>
             <li>Комбинация монолитного и микроядра</li>
             <li>Примеры: Windows NT, macOS</li>
         </ul>
-    </div>
-</div>
 
-<div class="section">
+
+
+
     <h2>Микроядерная архитектура</h2>
-    <div class="subsection">
-        <div class="list-title">Основные принципы</div>
+
+        Основные принципы
         <ul>
             <li>Минимальное ядро</li>
             <li>Серверы для функций ОС</li>
             <li>Клиенты для взаимодействия</li>
         </ul>
-    </div>
-    <div class="subsection">
-        <div class="list-title">Преимущества</div>
+
+
+        Преимущества
         <ul>
             <li>Изоляция компонентов</li>
             <li>Модульность</li>
             <li>Безопасность</li>
             <li>Простота обновления</li>
         </ul>
-    </div>
-    <div class="subsection">
-        <div class="list-title">Недостатки</div>
+
+
+        Недостатки
         <ul>
             <li>Сложность реализации</li>
             <li>Накладные расходы на IPC</li>
         </ul>
-    </div>
-    <div class="subsection">
-        <div class="list-title">Пример работы</div>
+
+
+        Пример работы
         <ol>
             <li>Клиент (приложение) отправляет запрос</li>
             <li>Сервер обрабатывает запрос</li>
             <li>Результат возвращается клиенту</li>
         </ol>
-    </div>
-</div>
 
-<div class="section">
+
+
     <h2>Примеры микроядерных ОС</h2>
     <ul>
         <li>Minix — образовательная система</li>
@@ -138,7 +116,8 @@
         <li>GNU Hurd — экспериментальная система</li>
     </ul>
     <p>Микроядерная архитектура обеспечивает высокую надёжность и модульность, но требует более сложных механизмов взаимодействия между компонентами. Выбор типа ядра зависит от требований к производительности, безопасности и удобству сопровождения системы.</p>
-</div>
+    </div>
+    </div>
 
 </body>
 </html>
